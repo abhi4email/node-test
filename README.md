@@ -30,29 +30,38 @@ Create a new post:
 Update post:
 `$ curl -x PUT 'http://localhost:3000/posts/2' -d {'title': 'Movie', 'text': 'Avengers end game 2'}`
 
+Get all posts:
+`$ curl -x GET 'http://localhost:3000/posts'}`
+
+Get single posts:
+`$ curl -x GET 'http://localhost:3000/posts/2'}`
+
+Delete single posts:
+`$ curl -x DELETE 'http://localhost:3000/posts/2'}`
 
 
+Create a new category:
+`$ curl -x POST 'http://localhost:3000/category' -d {'title': 'Movie', 'add_post': '[1,2]'}`
 
+Update category:
+`$ curl -x PUT 'http://localhost:3000/category/2' -d {'title': 'Movie' }`
 
+Get all category:
+`$ curl -x GET 'http://localhost:3000/category'}`
 
+Get single category:
+`$ curl -x GET 'http://localhost:3000/category/2'}`
 
+Delete single posts:
+`$ curl -x DELETE 'http://localhost:3000/category/2'}`
 
-        app.post('/posts',PostCtrl.createPost);
-	app.put('/posts/:id',PostCtrl.editPost);
-	app.get('/posts',PostCtrl.getPost);
-	app.get('/posts/:id',PostCtrl.getPostById);
-	app.delete('/posts/:id',PostCtrl.deletePost);
-	
-	app.post('/category',CatCtrl.createCategory);
-	app.put('/category/:id',CatCtrl.editCategory);
-	app.get('/category',CatCtrl.getCategory);
-	app.get('/category/:id',CatCtrl.getCategoryById);
-	app.delete('/category/:id',CatCtrl.deleteCategory);
-	
+Get Top category    
 	app.get('/top-category',CatCtrl.topCategory);
 	
+Get Top read category	
 	app.get('/top-read-category',CatCtrl.topCategoryRead);
 	
+Get get result
 	app.get('/search',PostCtrl.search);
 	
 
