@@ -1,17 +1,41 @@
-Node test project
+Node(test project) Installation Guide
 ===========================================================================
 
 Rest based API to manage post & category
 
 ===========================================
+1) git clone https://github.com/abhi4email/node-test.git
+2) navigate to the folder api and run 'npm install'
+3) Change Mongo configuration - app/_helper/config.js line 2
 
-Install: ```git clone https://github.com/abhi4email/node-test.git```
+Running Migrations
+This will create all required tables on DB : npx sequelize db:migrate
 
-$ >> NPM install
+Running Application
+npm start
+
+Running Test
+npm test
+
+By Default Api will be run at http://localhost:3000
 
 ===========================================
 
 API List: 
+
+
+Create a new post:
+`$ curl -x POST 'http://localhost:3000/posts' -d {'title': 'Movie', 'text': 'Avengers end game'}`
+
+Update post:
+`$ curl -x PUT 'http://localhost:3000/posts/2' -d {'title': 'Movie', 'text': 'Avengers end game 2'}`
+
+
+
+
+
+
+
 
         app.post('/posts',PostCtrl.createPost);
 	app.put('/posts/:id',PostCtrl.editPost);
