@@ -1,0 +1,160 @@
+
+.iconcont{display: block;
+    overflow: hidden;
+    clear: both;
+    position: relative;}
+    
+.iconq{ position: absolute;
+    font-size: 19px;
+    top: -2px;}
+    
+.search_h_cab input{text-indent: 21px;}    
+
+.input-group-append{    position: absolute;
+    top: -3px;
+    left: -5px;}
+    
+.input-group-text {
+    background: transparent;
+    border: 0;
+    margin-left: -5px;
+	margin-top: 0px;}   
+	
+	 
+	md-radio-button.md-default-theme .md-off, 
+	md-radio-button .md-off {
+	  border-color: rgba(255,255,255,0.54);
+	}
+	
+	md-radio-button.md-default-theme.md-checked .md-off, 
+	md-radio-button.md-checked .md-off {
+	  border-color: rgba(255,255,255,0.87);
+	}
+		
+	md-radio-button.md-default-theme .md-on, 
+	md-radio-button .md-on {
+	  background-color: rgba(255,255,255,0.80);
+	}	
+	.home_search_bx{font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";}
+	.home_search_bx md-tab-item.md-active{background-color: #FF7F30;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;}
+
+	.home_search_bx md-tabs.md-default-theme.md-primary>md-tabs-wrapper, md-tabs.md-primary>md-tabs-wrapper {
+		background-color: transparent
+	}	
+
+	.home_search_bx md-content.md-default-theme, .home_search_bx md-content {
+		color: rgba(255,255,255,0.87);
+		background-color:transparent;
+	}
+	.home_search_bx md-ink-bar{display:none}
+
+	.home_search_bx .md-tab {font-size: 15px;
+		text-align: center;
+		height: 31px;
+		padding: 5px 16px;}
+
+		.dividr{margin-bottom: 46px}
+		.home_search_bx i{color:rgba(255,255,255,0.56)}
+		md-input-container .md-placeholder, md-input-container label:not(.md-no-float):not(.md-container-ignore){padding-left:25px}
+		md-input-container.md-input-focused label{padding-left:0px!important}
+		md-input-container.md-input-has-value label{padding-left:0px!important}
+	    .md-input-focused .iconq,.home_search_bx md-input-container.md-input-has-value .iconq{top:8px}
+	     button.md-datepicker-button,md-time-picker .md-icon-button{display: none!important}
+		.md-icon-button+.md-datepicker-input-container {margin-left: 0px;}
+		md-hours-minutes input{text-indent:0px!important}
+    	md-datepicker input{text-indent: 27px;}
+
+	.timeleft{    margin-top: -19px;
+		margin-left: 11px;  width: 48%;
+		float: left;}
+	.dateleft{    width: 48%;
+		float: left;}	
+
+
+	.setleft{float: left;
+        width: 55%}	
+
+        .selectpak {
+            /* margin-right: 10px; */
+            /* width: 100%; */
+            margin-top: 11px;
+            float: left;
+            width: 41%;
+            margin-left: -13px;
+        }
+		
+    .selectpak md-input-container{width:100%}
+    
+    /*default*/
+    .querymap {text-indent:22px}
+    md-input-container label,md-input-container  label,md-select-value span,md-input-container input,md-datepicker input{color:#fff!important;}
+    md-input-container .md-input, md-select-value,.md-datepicker-input-container,md-select .md-select-value{border-bottom-color:rgba(255,255,255,1)}
+    .md-datepicker-input::placeholder,md-datepicker input::placeholder {
+		color:rgba(255,255,255,1);
+		opacity: 1; /* Firefox */
+	  }
+	  
+	  .md-datepicker-input:-ms-input-placeholder,md-datepicker input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color:rgba(255,255,255,1);
+	  }
+	  
+	  .md-datepicker-input::-ms-input-placeholder,md-datepicker input::-ms-input-placeholder { /* Microsoft Edge */
+		color:rgba(255,255,255,1)
+	  }
+    
+    
+    /*has value*/
+    md-input-container label,md-input-container.md-input-has-value label,md-select-value span{color:#fff;}
+    /* When the input is focused */
+    .md-datepicker-focused,.md-input-focused input,.md-input-focused md-select-value{border-bottom-color: #FF7F30!important;color:#ffffff}
+
+    md-input-container.md-input-focused label{color:#FF7F30!important}
+    .md-datepicker-triangle-button .md-datepicker-expand-triangle {
+		border-top-color: rgba(255,255,255,0.54);
+    }
+    .md-up-arrow, .md-down-arrow,md-select-icon{color: rgba(255,255,255,0.54);}
+
+
+
+	.toggle .btn-default{background:silver}
+    .toggle .btn-default.active{background:#FF7F30}
+    .settoggle{margin: 21px 0px;width:100%}
+    .settoggle.toggle .btn {
+        padding: 3px 0!important;
+        font-size: 16px;
+    }
+
+
+    @media only screen and (max-width: 359px) {
+       .home_search_bx md-tabs-canvas.md-paginated {
+            margin: 0!important;
+        }
+        .home_search_bx md-next-button, .home_search_bx md-prev-button {
+            display:none!important;
+        }    
+
+        .dateleft{width:48%}
+        .setleft{width:100%}
+        .timeleft {
+            margin-top: -20px;
+            margin-left: 0;
+            width: 48%;
+      
+        }
+        .selectpak {
+            margin:0px;
+            width: 100%;
+            margin-top: 31px;
+           
+          
+        }
+
+        .common_section{padding: 19px 9px;}
+
+        .resetrow{padding:0px}
+    }    
+ 
+    

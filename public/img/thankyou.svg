@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 339.668">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #1fbf75;
+      }
+
+      .cls-1 {
+        font-size: 95px;
+        font-family: ScriptMTBold, Script MT;
+      }
+
+      .cls-3 {
+        fill: #c2c2c2;
+        font-size: 35px;
+        font-family: SegoeUI, Segoe UI;
+      }
+
+      .cls-4, .cls-6 {
+        fill: none;
+      }
+
+      .cls-4 {
+        stroke: #c2c2c2;
+        stroke-width: 2px;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_170" data-name="Group 170" transform="translate(-781 -278.332)">
+    <text id="Welldone" class="cls-1" transform="translate(781 594)"><tspan x="0" y="0">Welldone</tspan></text>
+    <g id="Group_160" data-name="Group 160" transform="translate(19.322)">
+      <g id="check" transform="translate(835.262 288.706)">
+        <g id="Group_157" data-name="Group 157" transform="translate(0 0)">
+          <g id="Group_156" data-name="Group 156">
+            <path id="Path_196" data-name="Path 196" class="cls-2" d="M183.777,90.923a8.106,8.106,0,0,0-8.106,8.106v8.164a79.729,79.729,0,0,1-79.729,79.684H95.9a79.73,79.73,0,0,1,.045-159.459h.047a79.233,79.233,0,0,1,32.4,6.9,8.106,8.106,0,0,0,6.6-14.808A95.335,95.335,0,0,0,96,11.206H95.94A95.942,95.942,0,0,0,28.062,174.95a95.315,95.315,0,0,0,67.825,28.14h.056a95.942,95.942,0,0,0,95.94-95.891V99.029A8.106,8.106,0,0,0,183.777,90.923Z" transform="translate(0 -11.206)"/>
+          </g>
+        </g>
+        <g id="Group_159" data-name="Group 159" transform="translate(61.485 8.834)">
+          <g id="Group_158" data-name="Group 158">
+            <path id="Path_197" data-name="Path 197" class="cls-2" d="M293.686,36.12a8.106,8.106,0,0,0-11.463,0l-90.888,90.887-20.619-20.619a8.106,8.106,0,0,0-11.463,11.463L185.6,144.2a8.106,8.106,0,0,0,11.464,0l96.618-96.619A8.106,8.106,0,0,0,293.686,36.12Z" transform="translate(-156.879 -33.746)"/>
+          </g>
+        </g>
+      </g>
+      <text id="_" data-name="+" class="cls-3" transform="matrix(0.985, 0.174, -0.174, 0.985, 791.24, 376.365)"><tspan x="0" y="0">+</tspan></text>
+      <g id="Ellipse_8" data-name="Ellipse 8" class="cls-4" transform="translate(835.559 278.332)">
+        <ellipse class="cls-5" cx="12.657" cy="12.657" rx="12.657" ry="12.657"/>
+        <ellipse class="cls-6" cx="12.657" cy="12.657" rx="11.657" ry="11.657"/>
+      </g>
+      <text id="_2" data-name="+" class="cls-3" transform="translate(1016.714 435.084) rotate(65)"><tspan x="0" y="0">+</tspan></text>
+      <text id="_3" data-name="+" class="cls-3" transform="translate(1056.364 333.576) rotate(20)"><tspan x="0" y="0">+</tspan></text>
+      <g id="Ellipse_29" data-name="Ellipse 29" class="cls-4" transform="translate(1049.329 391.202)">
+        <ellipse class="cls-5" cx="7.526" cy="7.526" rx="7.526" ry="7.526"/>
+        <ellipse class="cls-6" cx="7.526" cy="7.526" rx="6.526" ry="6.526"/>
+      </g>
+    </g>
+  </g>
+</svg>

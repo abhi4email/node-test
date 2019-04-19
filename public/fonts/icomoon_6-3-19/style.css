@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?93l2sw');
+  src:  url('fonts/icomoon.eot?93l2sw#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?93l2sw') format('truetype'),
+    url('fonts/icomoon.woff?93l2sw') format('woff'),
+    url('fonts/icomoon.svg?93l2sw#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hamburger:before {
+  content: "\e920";
+}
+.icon-air-conditioner:before {
+  content: "\e900";
+}
+.icon-arrow_right:before {
+  content: "\e901";
+}
+.icon-briefcase:before {
+  content: "\e902";
+}
+.icon-bus:before {
+  content: "\e903";
+}
+.icon-calendar:before {
+  content: "\e904";
+}
+.icon-call:before {
+  content: "\e905";
+}
+.icon-charger:before {
+  content: "\e906";
+}
+.icon-employee:before {
+  content: "\e907";
+}
+.icon-facebook:before {
+  content: "\e908";
+}
+.icon-filter:before {
+  content: "\e909";
+}
+.icon-gear_manual:before {
+  content: "\e90a";
+}
+.icon-googlep:before {
+  content: "\e90b";
+}
+.icon-info:before {
+  content: "\e90c";
+}
+.icon-instagram:before {
+  content: "\e90d";
+}
+.icon-navigation:before {
+  content: "\e90e";
+}
+.icon-padlock:before {
+  content: "\e90f";
+}
+.icon-placeholder:before {
+  content: "\e910";
+}
+.icon-play-button:before {
+  content: "\e911";
+}
+.icon-safety-seat:before {
+  content: "\e912";
+}
+.icon-steering-wheel:before {
+  content: "\e913";
+}
+.icon-taxi:before {
+  content: "\e914";
+}
+.icon-twitter:before {
+  content: "\e915";
+}
+.icon-email:before {
+  content: "\e916";
+}
+.icon-phone:before {
+  content: "\e917";
+}
+.icon-placeholder1:before {
+  content: "\e918";
+}
+.icon-hatchback:before {
+  content: "\e919";
+}
+.icon-luxury:before {
+  content: "\e91a";
+}
+.icon-sedan:before {
+  content: "\e91b";
+}
+.icon-suvmuv:before {
+  content: "\e91c";
+}
+.icon-van:before {
+  content: "\e91d";
+}
+.icon-mini_coach:before {
+  content: "\e91e";
+}
+.icon-volvo:before {
+  content: "\e91f";
+}

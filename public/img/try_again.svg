@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 714 331.668">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: #e2574c;
+      }
+
+      .cls-1 {
+        font-size: 95px;
+        font-family: ScriptMTBold, Script MT;
+      }
+
+      .cls-2 {
+        fill: #c2c2c2;
+        font-size: 35px;
+        font-family: SegoeUI, Segoe UI;
+      }
+
+      .cls-3, .cls-6 {
+        fill: none;
+      }
+
+      .cls-3 {
+        stroke: #c2c2c2;
+        stroke-width: 2px;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_171" data-name="Group 171" transform="translate(-603 -278.332)">
+    <text id="Oops_Try_Again" data-name="Oops… Try Again" class="cls-1" transform="translate(603 586)"><tspan x="0" y="0">Oops… Try Again</tspan></text>
+    <g id="Group_160" data-name="Group 160" transform="translate(19.322)">
+      <text id="_" data-name="+" class="cls-2" transform="matrix(0.985, 0.174, -0.174, 0.985, 791.24, 376.365)"><tspan x="0" y="0">+</tspan></text>
+      <g id="Ellipse_8" data-name="Ellipse 8" class="cls-3" transform="translate(835.559 278.332)">
+        <ellipse class="cls-5" cx="12.657" cy="12.657" rx="12.657" ry="12.657"/>
+        <ellipse class="cls-6" cx="12.657" cy="12.657" rx="11.657" ry="11.657"/>
+      </g>
+      <text id="_2" data-name="+" class="cls-2" transform="translate(1016.714 435.084) rotate(65)"><tspan x="0" y="0">+</tspan></text>
+      <text id="_3" data-name="+" class="cls-2" transform="translate(1056.364 333.576) rotate(20)"><tspan x="0" y="0">+</tspan></text>
+      <g id="Ellipse_29" data-name="Ellipse 29" class="cls-3" transform="translate(1049.329 391.202)">
+        <ellipse class="cls-5" cx="7.526" cy="7.526" rx="7.526" ry="7.526"/>
+        <ellipse class="cls-6" cx="7.526" cy="7.526" rx="6.526" ry="6.526"/>
+      </g>
+    </g>
+    <g id="exclamation-mark" transform="translate(855 291.332)">
+      <path id="Path_198" data-name="Path 198" class="cls-4" d="M94.361,0a94.361,94.361,0,1,0,94.361,94.361A94.365,94.365,0,0,0,94.361,0Zm0,171.029a76.668,76.668,0,1,1,76.668-76.668A76.666,76.666,0,0,1,94.361,171.029Zm.006-129.646c-6.758,0-11.872,3.527-11.872,9.224v52.252c0,5.7,5.113,9.218,11.872,9.218,6.593,0,11.872-3.662,11.872-9.218V50.607C106.238,45.045,100.961,41.383,94.367,41.383Zm0,82.466a11.777,11.777,0,1,0,11.772,11.783A11.794,11.794,0,0,0,94.367,123.849Z"/>
+    </g>
+  </g>
+</svg>
