@@ -13,7 +13,7 @@ $ >> NPM install
 
 API List: 
 
-app.post('/posts',PostCtrl.createPost);
+        app.post('/posts',PostCtrl.createPost);
 	app.put('/posts/:id',PostCtrl.editPost);
 	app.get('/posts',PostCtrl.getPost);
 	app.get('/posts/:id',PostCtrl.getPostById);
