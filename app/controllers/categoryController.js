@@ -4,9 +4,6 @@ const Category= require('../models/category');
 const CategoryPost= require('../models/post_category');
  
 
-/*
- * POST /category to save a new category.
- */
 
 exports.createCategory= async function(req,res,next){
 	try{
@@ -27,9 +24,10 @@ exports.createCategory= async function(req,res,next){
         if(data){
 			return res.status(400).json({success:false,message:"Category already exist"}) 
 		}
-		
+		//console.log(Array.isArray(request.add_post))
+		request.count=0;
 		if(request.add_post && Array.isArray(request.add_post)) request.count= request.add_post.length;
-        data = await Category.build({title:request.title}).save();
+        data = await Category.build({title:request.title,count:request.count}).save();
         var postsCat=[];
         if(data && request.add_post && Array.isArray(request.add_post)){
 			request.add_post.forEach(function(el){				
@@ -51,10 +49,6 @@ exports.createCategory= async function(req,res,next){
         
 }
 
-
-/*
- * PUT /cagetory/:id to updatea a category given its id
- */
 exports.editCategory= async function(req,res,next){
 	try{
 		
@@ -120,10 +114,6 @@ exports.editCategory= async function(req,res,next){
         
 }
 
-/*
- * GET /category route to retrieve all the category.
- */
-
 exports.getCategory= async function(req,res,next){
 	try{
 		
@@ -144,10 +134,6 @@ exports.getCategory= async function(req,res,next){
         
 }
 
-
-/*
- * GET /top-category route to retrieve all the category based on their number of related post.
- */
 exports.topCategory= async function(req,res,next){
 	try{
 		
@@ -168,9 +154,6 @@ exports.topCategory= async function(req,res,next){
         
 }
 
-/*
- * GET /top-read-category route to retrieve all the category based on user hit on related blog.
- */
 exports.topCategoryRead= async function(req,res,next){
 	try{
 		
@@ -191,9 +174,6 @@ exports.topCategoryRead= async function(req,res,next){
         
 }
 
-/*
- * GET /category/:id route to retrieve a category given its id.
- */
 exports.getCategoryById= async function(req,res,next){
 	try{
 		
@@ -214,9 +194,7 @@ exports.getCategoryById= async function(req,res,next){
         
 }
 
-/*
- * DELETE /category/:id to delete a category given its id.
- */
+
 exports.deleteCategory= async function(req,res,next){
 	try{
 		

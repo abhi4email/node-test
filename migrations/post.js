@@ -1,9 +1,9 @@
-const sequelize = require('../_helpers/db');
 const Sequelize = require('sequelize');
 
-
-var Post = sequelize.define('post', {
-    id: {
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.createTable('post', {
+         id: {
       type: Sequelize.INTEGER(11),
       allowNull: false,
       primaryKey: true,
@@ -23,28 +23,19 @@ var Post = sequelize.define('post', {
     },
     hits: {
       type: Sequelize.INTEGER(11),
-      allowNull: false,
-      defaultValue: 0
+      allowNull: true 
     },
     
     createdAt: {
-      type:  'TIMESTAMP',
-      allowNull: true,
+      type:  Sequelize.DATE,
+      allowNull: true  ,
       defaultValue:Sequelize.NOW
     },
     updatedAt: {
-      type:  'TIMESTAMP',
+      type:  Sequelize.DATE,
       allowNull: true,
-      defaultValue:Sequelize.NOW
-    },
-    
-  }, {
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true
-  });
-
-  
-
-  module.exports=Post;
-
+      defaultValue:Sequelize.NOW 
+    }
+      });
+  }
+}

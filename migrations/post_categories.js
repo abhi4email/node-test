@@ -1,9 +1,9 @@
-const sequelize = require('../_helpers/db');
 const Sequelize = require('sequelize');
 
-
-var PostCaegories = sequelize.define('post_categories', {
-    id: {
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.createTable('post_categories', {
+   id: {
       type: Sequelize.INTEGER(11),
       allowNull: false,
       primaryKey: true,
@@ -27,22 +27,6 @@ var PostCaegories = sequelize.define('post_categories', {
       },
        
     },
-    
-  }, {
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true
-  });
-
-  PostCaegories.deleteRecords = async function(obj){
-	 try{
-	 obj.forEach(async function(el){
-		 await PostCaegories.destroy({where: {post_id:el.post_id,category_id:el.category_id}});
-	 })	 
-		 
-	 }catch(err){} 
-	 return true;	
+      });
   }
-
-  module.exports=PostCaegories;
-
+}

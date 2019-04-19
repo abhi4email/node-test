@@ -3,9 +3,6 @@ const Joi = require('joi');
 const Post= require('../models/post');
 const Sequelize = require('sequelize');
 
-/*
- * POST /posts to save a new blog.
- */
 
 exports.createPost= async function(req,res,next){
 	try{
@@ -46,9 +43,6 @@ exports.createPost= async function(req,res,next){
         
 }
 
-/*
- * PUT /posts/:id to updatea a blog given its id
- */
 exports.editPost= async function(req,res,next){
 	try{
 		
@@ -84,9 +78,6 @@ exports.editPost= async function(req,res,next){
         
 }
 
-/*
- * GET /posts route to retrieve all the blogs.
- */
 exports.getPost= async function(req,res,next){
 	try{
 		
@@ -108,16 +99,13 @@ exports.getPost= async function(req,res,next){
         
 }
 
-/*
- * GET /posts/:id route to retrieve a blog given its id.
- */
 exports.getPostById= async function(req,res,next){
 	try{
 		
 					 
         
         var data= await Post.find({where:{id:req.params.id}});
-         await Post.update({hits:data.hits},{where: {id:data.id}}); 
+         await Post.update({hits:data.hits+1},{where: {id:data.id}}); 
         if(data){
 			return res.status(200).json({success:true,data:data})
 		}else{
@@ -132,9 +120,6 @@ exports.getPostById= async function(req,res,next){
         
 }
 
-/*
- * DELETE /posts/:id to delete a post given its id.
- */
 
 exports.deletePost= async function(req,res,next){
 	try{
@@ -142,7 +127,7 @@ exports.deletePost= async function(req,res,next){
 		var postID=req.params['id'];
 		
 		
-		var data= await Post.findOne({where:{id:id}});
+		var data= await Post.findOne({where:{id:postID}});
 		if(!data){
 			return res.status(400).json({status:false, message:'Post Not found' });
 		}			 
@@ -157,9 +142,6 @@ exports.deletePost= async function(req,res,next){
         
 }
 
-/*
- * GET /search/ to search the blog as per user query.
- */
 exports.search= async function(req,res,next){
 	try{
 		
