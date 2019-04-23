@@ -2,7 +2,7 @@ const sequelize = require('../_helpers/db');
 const Sequelize = require('sequelize');
 
 
-var Category = sequelize.define('categories', {
+let Category = sequelize.define('categories', {
     id: {
       type: Sequelize.INTEGER(11),
       allowNull: false,

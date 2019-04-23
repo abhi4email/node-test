@@ -1,5 +1,5 @@
-var PostCtrl = require('../controllers/postController');
-var CatCtrl = require('../controllers/categoryController');
+const PostCtrl = require('../controllers/postController');
+const CatCtrl = require('../controllers/categoryController');
 
     
 module.exports = function(app) {

@@ -2,12 +2,13 @@
 const Joi = require('joi');
 const Post= require('../models/post');
 const Sequelize = require('sequelize');
+const slugify = require('slug')
 
 
 exports.createPost= async function(req,res,next){
 	try{
-		var request=req.body;
-		var jioObj = {
+		let request=req.body;
+		let jioObj = {
             title: Joi.string().required(),    
             text: Joi.string().required()
         }
@@ -17,16 +18,11 @@ exports.createPost= async function(req,res,next){
             return res.status(400).json({status:false, message:'Field ' +  result.error.details[0].message });
         }
         
-        var slug=request.title.toString().toLowerCase()
-					.replace(/\s+/g, '-')            
-					.replace(/[^\w\-]+/g, '')        
-					.replace(/\-\-+/g, '-')          
-					.replace(/^-+/, '')              
-					.replace(/-+$/, ''); 
+        const slug=slugify(request.title, '_').toLowerCase();
 					
 		
-		var duplicate=0;
-		var data= await Post.findOne({where:{slug:slug}});			 
+		let duplicate=0;
+		let data= await Post.findOne({where:{slug:slug}});			 
         if(data) duplicate=1;
         request.slug=slug;
         data = await Post.build(request).save();
@@ -46,9 +42,9 @@ exports.createPost= async function(req,res,next){
 exports.editPost= async function(req,res,next){
 	try{
 		
-		var postID=req.params['id'];
-		var request=req.body;
-		var jioObj = {
+		const postID=req.params['id'];
+		let request=req.body;
+		let jioObj = {
             title: Joi.string().required(),    
             text: Joi.string().required()
         }
@@ -58,11 +54,11 @@ exports.editPost= async function(req,res,next){
             return res.status(400).json({status:false, message:'Field ' +  result.error.details[0].message });
         }
 		
-		var data= await Post.findOne({where:{id:postID}});
+		let data= await Post.findOne({where:{id:postID}});
 		if(!data){
 			return res.status(400).json({status:false, message:'Post Not found' });
 		}			 
-        
+        request.updatedAt=new Date();
         data= await Post.update(request,{where: {id:data.id}});
         if(data){
 			return res.status(200).json({success:true})
@@ -83,7 +79,7 @@ exports.getPost= async function(req,res,next){
 		
 					 
         
-        var data= await Post.findAll({});
+        const data= await Post.findAll({});
        
         if(data){
 			return res.status(200).json({success:true,data:data})
@@ -104,7 +100,7 @@ exports.getPostById= async function(req,res,next){
 		
 					 
         
-        var data= await Post.find({where:{id:req.params.id}});
+        const data= await Post.find({where:{id:req.params.id}});
          await Post.update({hits:data.hits+1},{where: {id:data.id}}); 
         if(data){
 			return res.status(200).json({success:true,data:data})
@@ -124,10 +120,10 @@ exports.getPostById= async function(req,res,next){
 exports.deletePost= async function(req,res,next){
 	try{
 		
-		var postID=req.params['id'];
+		const postID=req.params['id'];
 		
 		
-		var data= await Post.findOne({where:{id:postID}});
+		const data= await Post.findOne({where:{id:postID}});
 		if(!data){
 			return res.status(400).json({status:false, message:'Post Not found' });
 		}			 
@@ -145,11 +141,11 @@ exports.deletePost= async function(req,res,next){
 exports.search= async function(req,res,next){
 	try{
 		
-		var postID=req.query['s'];
+		const postID=req.query['s'];
 		const Op = Sequelize.Op
 		
 		
-		var data= await Post.findAll({where:{
+		const data= await Post.findAll({where:{
 			  [Op.or]: [
 					{
 					  title: {

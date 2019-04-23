@@ -2,7 +2,7 @@ const sequelize = require('../_helpers/db');
 const Sequelize = require('sequelize');
 
 
-var Post = sequelize.define('post', {
+let Post = sequelize.define('post', {
     id: {
       type: Sequelize.INTEGER(11),
       allowNull: false,
@@ -34,8 +34,8 @@ var Post = sequelize.define('post', {
     },
     updatedAt: {
       type:  'TIMESTAMP',
+       
       allowNull: true,
-      defaultValue:Sequelize.NOW
     },
     
   }, {

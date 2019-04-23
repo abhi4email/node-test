@@ -7,9 +7,9 @@ const CategoryPost= require('../models/post_category');
 
 exports.createCategory= async function(req,res,next){
 	try{
-		var request=req.body;
+		let request=req.body;
 		 
-		var jioObj = {
+		let jioObj = {
             title: Joi.string().required(),
             add_post:Joi.optional()
         }
@@ -20,7 +20,7 @@ exports.createCategory= async function(req,res,next){
         }
         
         
-		var data= await Category.findOne({where:{title:request.title}});			 
+		let data= await Category.findOne({where:{title:request.title}});			 
         if(data){
 			return res.status(400).json({success:false,message:"Category already exist"}) 
 		}
@@ -52,9 +52,9 @@ exports.createCategory= async function(req,res,next){
 exports.editCategory= async function(req,res,next){
 	try{
 		
-		var postID=req.params['id'];
-		var request=req.body;
-		var jioObj = {
+		const postID=req.params['id'];
+		let request=req.body;
+		let jioObj = {
             title: Joi.string().required(),    
             add_post:Joi.optional(),
             delete_post:Joi.optional()
@@ -65,11 +65,11 @@ exports.editCategory= async function(req,res,next){
             return res.status(400).json({status:false, message:'Field ' +  result.error.details[0].message });
         }
 		
-		var data= await Category.findOne({where:{id:postID}});
+		let data= await Category.findOne({where:{id:postID}});
 		if(!data){
 			return res.status(400).json({status:false, message:'Category Not found' });
 		}			 
-        var counter=data.count;
+        let counter=data.count;
         if(request.add_post && Array.isArray(request.add_post)){
 				if(request.delete_post && Array.isArray(request.delete_post)){
 					counter= (data.count + request.add_post.length) -request.delete_post.length; 
@@ -81,7 +81,7 @@ exports.editCategory= async function(req,res,next){
 		}	
 		
         await Category.update({title:request.title,count:counter},{where: {id:data.id}});
-		var postsCat=[]
+		const postsCat=[]
 		if(  request.add_post && Array.isArray(request.add_post)){
 				request.add_post.forEach(function(el){				
 					postsCat.push({post_id:el,category_id:data.id})
@@ -119,7 +119,7 @@ exports.getCategory= async function(req,res,next){
 		
 					 
         
-        var data= await Category.findAll({});
+        const data= await Category.findAll({});
         if(data){
 			return res.status(200).json({success:true,data:data})
 		}else{
@@ -139,7 +139,7 @@ exports.topCategory= async function(req,res,next){
 		
 					 
         
-        var data= await Category.findAll({order: [['count', 'DESC']]});
+        const data= await Category.findAll({order: [['count', 'DESC']]});
         if(data){
 			return res.status(200).json({success:true,data:data})
 		}else{
@@ -159,7 +159,7 @@ exports.topCategoryRead= async function(req,res,next){
 		
 					 
         
-        var data= await Category.topRead();
+        const data= await Category.topRead();
         if(data){
 			return res.status(200).json({success:true,data:data})
 		}else{
@@ -179,7 +179,7 @@ exports.getCategoryById= async function(req,res,next){
 		
 					 
         
-        var data= await Category.find({where:{id:req.params.id}});
+        const data= await Category.find({where:{id:req.params.id}});
         if(data){
 			return res.status(200).json({success:true,data:data})
 		}else{
@@ -198,10 +198,10 @@ exports.getCategoryById= async function(req,res,next){
 exports.deleteCategory= async function(req,res,next){
 	try{
 		
-		var postID=req.params['id'];
+		let postID=req.params['id'];
 		
 		
-		var data= await Category.findOne({where:{id:postID}});
+		const data= await Category.findOne({where:{id:postID}});
 		if(!data){
 			return res.status(400).json({status:false, message:'Category Not found' });
 		}			 

@@ -2,7 +2,7 @@ const sequelize = require('../_helpers/db');
 const Sequelize = require('sequelize');
 
 
-var PostCaegories = sequelize.define('post_categories', {
+let PostCaegories = sequelize.define('post_categories', {
     id: {
       type: Sequelize.INTEGER(11),
       allowNull: false,
