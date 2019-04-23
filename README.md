@@ -56,13 +56,13 @@ Delete single posts:
 `$ curl -x DELETE 'http://localhost:3000/category/2'}`
 
 Get Top category    
-	app.get('/top-category',CatCtrl.topCategory);
+`$ curl -x GET 'http://localhost:3000/top-category'}`
 	
 Get Top read category	
-	app.get('/top-read-category',CatCtrl.topCategoryRead);
+`$ curl -x GET 'http://localhost:3000/top-read-category'}`
 	
 Get get result
-	app.get('/search',PostCtrl.search);
+`$ curl -x GET 'http://localhost:3000/search?s=movie'}`
 	
 
 ===========================================
