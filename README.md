@@ -6,7 +6,7 @@ Rest based API to manage post & category
 ===========================================
 1) git clone https://github.com/abhi4email/node-test.git
 2) navigate to the folder api and run 'npm install'
-3) Change Mongo configuration - app/_helper/config.js line 2
+3) Change DB configuration - app/_helper/config.js line 2
 
 Running Migrations
 This will create all required tables on DB : npx sequelize db:migrate
